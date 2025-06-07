@@ -20,3 +20,43 @@
   text-decoration: none;
   color: inherit;
 }
+/* 🔄 Dark mode toggle styles */
+
+.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Navbar (Topbar) Dark Theme */
+.dark .topbar {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+/* Sidebar (when you share it) */
+.dark .sidebar {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Main content area */
+.dark .others {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Links in dark mode */
+.dark .link {
+  color: #ccc;
+}
+
+/* Dark mode toggle button */
+.darkModeBtn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #555;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}

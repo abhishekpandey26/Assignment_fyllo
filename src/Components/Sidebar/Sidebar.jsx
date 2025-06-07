@@ -1,11 +1,7 @@
-import React from "react"
-import "./Sidebar.css"
-import { Link } from "react-router-dom"
-import {
-  TrendingUp,
-  Inventory2
-} from "@mui/icons-material"
-
+import React from "react";
+import "./Sidebar.css";
+import { Link } from "react-router-dom";
+import { TrendingUp, Inventory2 } from "@mui/icons-material";
 
 function Sidebar() {
   return (
@@ -27,12 +23,17 @@ function Sidebar() {
               </li>
             </Link>
 
-
+            <Link to="/Assingment" className="link">
+              <li className="sidebarListItem">
+                
+                
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

@@ -2,7 +2,7 @@ import React from "react"
 import "./Topbar.css"
 import { NotificationsNone,Settings,Language } from "@mui/icons-material"
 
-export default function Topbar() {
+export default function Topbar({ toggleDarkMode }) {
   return (
     <div className="topbar">
       <div className="topbarWrapper">
@@ -10,6 +10,9 @@ export default function Topbar() {
           <span className="Logo">Fyllo</span>
         </div>
         <div className="topRight">
+          <button onClick={toggleDarkMode} className="darkModeBtn">
+            🌙
+          </button>
           <div className="topbarIconContainer">
             <NotificationsNone />
             <span className="topIconBag">2</span>
@@ -21,9 +24,14 @@ export default function Topbar() {
           <div className="topbarIconContainer">
             <Settings />
           </div>
-          <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="test" className="topAvatar"/>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/147/147144.png"
+            alt="test"
+            className="topAvatar"
+          />
         </div>
       </div>
     </div>
-  )
+  );
 }
+

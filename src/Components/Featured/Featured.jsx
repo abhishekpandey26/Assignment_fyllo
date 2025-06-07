@@ -4,6 +4,8 @@ import Chart from "../Chart/Chart"
 import Bigchart from "../Bigchart"
 import Piechart from "../Piechart"
 
+import YearlyChart from "../YearlyChart/YearlyChart.js"
+
 function Featured() {
   return (
     <div className="featured">
@@ -25,6 +27,10 @@ function Featured() {
         title="Product Availability and Requirements"
         grid
       />
+      <YearlyChart
+  data={data}
+  title="Fertilizer Availability & Requirements Across the Year"
+/>
       <div className="featuredItem">
         <div className="widgetsm">
           <Chart

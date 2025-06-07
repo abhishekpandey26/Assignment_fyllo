@@ -20,16 +20,9 @@ export function getData(data, parent, child) {
     }
     return statistics
   }
-  // result looks like this
-  // {
-  //   'Andaman & Nicobar': { DAP: 5, MAP: 5, MOP: 5, NPK: 5, TSP: 5, UREA: 5, SSP: 5 },
-  //   'Andhra Pradesh': { DAP: 5, MAP: 5, MOP: 5, NPK: 5, TSP: 5, UREA: 5, SSP: 5 },
-  //   'Arunachal Pradesh': { DAP: 5, MAP: 5, MOP: 5, NPK: 5, TSP: 5, UREA: 5, SSP: 5 },
-  // }
-
+  
   let states = {}
-  // let parent = "state"
-  // let child = "product"
+ 
   for (let obj of data) {
     if (!states.hasOwnProperty(obj[parent])) {
       states[obj[parent]] = {}
