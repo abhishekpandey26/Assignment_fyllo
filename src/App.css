@@ -20,34 +20,58 @@
   text-decoration: none;
   color: inherit;
 }
-/* 🔄 Dark mode toggle styles */
+/* 🔄 Dark mode styles */
 
-.dark {
-  background-color: #121212;
-  color: #e0e0e0;
+body.dark {
+  background-color: #2E2E2E;
+  color: #f1f1f1;
 }
 
-/* Navbar (Topbar) Dark Theme */
 .dark .topbar {
-  background-color: #1f1f1f;
-  color: white;
+  background-color: #3c3c3c;
+  color: #f1f1f1;
+  border-bottom: 1px solid #4f4f4f;
 }
 
-/* Sidebar (when you share it) */
 .dark .sidebar {
-  background-color: #1a1a1a;
-  color: white;
+  background-color: #333333;
+  color: #f1f1f1;
+}
+
+.dark .featured-table-card,
+.dark .bigchart,
+.dark .chart-container {
+  background-color: #3c3c3c;
+  color: #f1f1f1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.dark .featured-table-title,
+.dark .compact-table h4,
+.dark .bigchartTitle,
+.dark .recharts-text,
+.dark .recharts-legend-item-text {
+  color: #f1f1f1;
+}
+
+.dark .featured-table th {
+  background-color: #4f4f4f;
+}
+
+.dark .featured-table td,
+.dark .featured-table th {
+  border-bottom: 1px solid #4f4f4f;
 }
 
 /* Main content area */
 .dark .others {
-  background-color: #222;
-  color: #fff;
+  background-color: #2E2E2E;
+  color: #f1f1f1;
 }
 
 /* Links in dark mode */
 .dark .link {
-  color: #ccc;
+  color: #adadad;
 }
 
 /* Dark mode toggle button */

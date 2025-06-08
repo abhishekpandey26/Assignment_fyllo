@@ -25,6 +25,9 @@ This project was built as an assignment, and the following tasks were completed 
 ### 5. Dark Mode Toggle
 - **Theme Switching:** Implemented a dark mode toggle that allows users to switch between a light and dark theme for better visual comfort.
 
+### 6. Assignment Page
+- **Dedicated Route:** A new page has been created at the `/Assignment` route, which showcases the core features of the assignment in a focused view.
+
 These changes fulfill all the requirements of the assignment, providing a comprehensive and interactive dashboard for fertilizer data analysis.
 
 ## Getting Started
