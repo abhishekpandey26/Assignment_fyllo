@@ -22,6 +22,9 @@ This project was built as an assignment, and the following tasks were completed 
 - **AG Grid Integration:** The project now uses AG Grid to display the raw data in a tabular format.
 - **Enhanced Functionality:** The grid includes features like sorting, filtering, and column resizing, allowing for easy data exploration and analysis.
 
+### 5. Dark Mode Toggle
+- **Theme Switching:** Implemented a dark mode toggle that allows users to switch between a light and dark theme for better visual comfort.
+
 These changes fulfill all the requirements of the assignment, providing a comprehensive and interactive dashboard for fertilizer data analysis.
 
 ## Getting Started
