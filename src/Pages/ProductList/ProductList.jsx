@@ -1,8 +1,8 @@
 import "./ProductList.css"
 import { data } from "../../result"
 import { AgGridReact } from "ag-grid-react"
-import "ag-grid-community/dist/styles/ag-grid.css"
-import "ag-grid-community/dist/styles/ag-theme-alpine.css"
+import "ag-grid-community/styles/ag-grid.css"
+import "ag-grid-community/styles/ag-theme-alpine.css"
 
 const columns = [
   {

@@ -22,7 +22,7 @@ function Bigchart({
   subtitle,
   defaultValue,
 }) {
-  // ❌ PROBLEM: HARDCODED ARRAYS - These might not match your actual data
+  //  
   /*
   const months = [
     "January",
@@ -79,30 +79,30 @@ function Bigchart({
   ]
   */
 
-  // ✅ FIXED: DYNAMIC ARRAYS - Extract from actual data
+  //  extract from actual data from the result
   const [uniqueMonths, setUniqueMonths] = useState([]);
   const [uniqueStates, setUniqueStates] = useState([]);
 
-  // ❌ PROBLEM: Using hardcoded array values that might not exist in data
+  // 
   /*
   const [statevalue, setStatevalue] = useState(states[0])
   const [monthvalue, setMonthvalue] = useState(months[0])
   */
 
-  // ✅ FIXED: Initialize with empty strings, set real values in useEffect
+  // using useEffect for the maping the data from the result
   const [statevalue, setStatevalue] = useState("");
   const [monthvalue, setMonthvalue] = useState("");
 
-  // ✅ NEW: Extract unique values from actual data on component mount
+  // extracting the actual value 
   useEffect(() => {
     if (data && data.length > 0) {
-      // Get unique months from your actual data
+      //we are getting the months from your actual data
       const months = [...new Set(data.map((item) => item.month))].filter(
         Boolean
       );
       setUniqueMonths(months);
 
-      // Get unique states from your actual data
+      // we are getting the states from your actual data
       const states = [...new Set(data.map((item) => item.state))].filter(
         Boolean
       );
@@ -121,7 +121,7 @@ function Bigchart({
     setMonthvalue(e.target.value);
   }
 
-  // ✅ YOUR ORIGINAL FILTERING LOGIC (This was actually correct!)
+ 
   let chartData = data.filter((obj) => {
     if (obj["state"] === statevalue && obj["month"] === monthvalue) {
       return true;
@@ -129,13 +129,13 @@ function Bigchart({
     return false;
   });
 
-  // ✅ YOUR ORIGINAL DATA PROCESSING (This was also correct!)
+  
   for (let element of chartData) {
     element["requirement_in_mt_"] = parseFloat(element["requirement_in_mt_"]);
     element["availability_in_mt_"] = parseFloat(element["availability_in_mt_"]);
   }
 
-  // ✅ IMPROVED: Filter out zero values for better visualization (OPTIONAL)
+  
   chartData = chartData.filter(
     (item) => item.requirement_in_mt_ > 0 || item.availability_in_mt_ > 0
   );
@@ -146,7 +146,7 @@ function Bigchart({
 
       <div className="bigchartSelect">
         <h5>Month</h5>
-        {/* ❌ OLD: Using hardcoded months array */}
+       
         {/* 
         <select onChange={OnchangeSetmonthvalue}>
           {months.map((e) => {
@@ -159,7 +159,7 @@ function Bigchart({
         </select>
         */}
 
-        {/* ✅ FIXED: Using dynamic months from actual data */}
+        
         <select value={monthvalue} onChange={OnchangeSetmonthvalue}>
           {uniqueMonths.map((e) => {
             return (
@@ -171,7 +171,7 @@ function Bigchart({
         </select>
 
         <h5>State</h5>
-        {/* ❌ OLD: Using hardcoded states array */}
+      
         {/* 
         <select onChange={OnchangeSetstatevalue}>
           {states.map((e) => {
@@ -184,7 +184,7 @@ function Bigchart({
         </select>
         */}
 
-        {/* ✅ FIXED: Using dynamic states from actual data */}
+        
         <select value={statevalue} onChange={OnchangeSetstatevalue}>
           {uniqueStates.map((e) => {
             return (
@@ -195,13 +195,13 @@ function Bigchart({
           })}
         </select>
 
-        {/* ✅ YOUR ORIGINAL ERROR MESSAGE (Good!) */}
+       
         {chartData.length ? null : (
           <h6 className="errordata">No data available to show</h6>
         )}
       </div>
 
-      {/* ✅ YOUR ORIGINAL CHART (This was perfect!) */}
+      
       <ResponsiveContainer width="100%" height="100%" aspect={2 / 1}>
         <BarChart
           width={700}

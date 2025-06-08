@@ -2,6 +2,7 @@ import React from "react";
 import "./Sidebar.css";
 import { Link } from "react-router-dom";
 import { TrendingUp, Inventory2 } from "@mui/icons-material";
+import AssignmentIcon from '@mui/icons-material/Assignment';
 
 function Sidebar() {
   return (
@@ -23,10 +24,10 @@ function Sidebar() {
               </li>
             </Link>
 
-            <Link to="/Assingment" className="link">
+            <Link to="/Assignment" className="link">
               <li className="sidebarListItem">
-                
-                
+                <AssignmentIcon className="sidebarIcon" />
+                Assignments
               </li>
             </Link>
           </ul>

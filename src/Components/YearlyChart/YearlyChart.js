@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import "./YearlyChart.css" // Create this CSS file
+import "./YearlyChart.css" 
 
 import {
   LineChart,
@@ -24,7 +24,7 @@ function YearlyChart({ title, data }) {
   const [uniqueStates, setUniqueStates] = useState([])
   const [chartData, setChartData] = useState([])
 
-  // Extract unique values from data
+  
   useEffect(() => {
     if (data && data.length > 0) {
       const products = [...new Set(data.map(item => item.product))].filter(Boolean)
@@ -33,21 +33,21 @@ function YearlyChart({ title, data }) {
       setUniqueProducts(products)
       setUniqueStates(states)
       
-      // Set default values
+      
       if (products.length > 0) setSelectedProduct(products[0])
       if (states.length > 0) setSelectedState(states[0])
     }
   }, [data])
 
-  // Process data for yearly timeline
+  
   useEffect(() => {
     if (selectedProduct && selectedState && data.length > 0) {
-      // Filter data for selected product and state
+      
       const filteredData = data.filter(item => 
         item.product === selectedProduct && item.state === selectedState
       )
 
-      // Group by month and calculate totals
+      
       const monthlyData = filteredData.reduce((acc, item) => {
         const month = item.month
         const requirement = parseFloat(item.requirement_in_mt_) || 0
@@ -69,7 +69,7 @@ function YearlyChart({ title, data }) {
         return acc
       }, {})
 
-      // Convert to array and sort by month order
+      
       const monthOrder = [
         'April', 'May', 'June', 'July', 'August', 'September',
         'October', 'November', 'December', 'January', 'February', 'March'
@@ -121,7 +121,7 @@ function YearlyChart({ title, data }) {
 
       {chartData.length > 0 ? (
         <div className="chart-container">
-          {/* Line Chart for Trends */}
+          
           <div className="chart-section">
             <h4>Monthly Trend Analysis</h4>
             <ResponsiveContainer width="100%" height={300}>
@@ -163,7 +163,7 @@ function YearlyChart({ title, data }) {
             </ResponsiveContainer>
           </div>
 
-          {/* Bar Chart for Comparison */}
+          
           <div className="chart-section">
             <h4>Monthly Comparison</h4>
             <ResponsiveContainer width="100%" height={300}>
@@ -184,7 +184,7 @@ function YearlyChart({ title, data }) {
             </ResponsiveContainer>
           </div>
 
-          {/* Area Chart for Supply-Demand Gap */}
+          
           <div className="chart-section">
             <h4>Supply-Demand Gap Analysis</h4>
             <ResponsiveContainer width="100%" height={300}>

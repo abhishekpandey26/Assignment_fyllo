@@ -5,7 +5,8 @@ import Topbar from "./Components/Topbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import "./App.css";
-import { Assignment } from "@mui/icons-material";
+
+import Assisments from "./Pages/Assisments";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -26,7 +27,7 @@ function App() {
               <ProductList />
             </Route>
             <Route exact path="/Assignment">
-              <Assignment></Assignment>
+              <Assisments></Assisments>
             </Route>
           </Switch>
         </div>

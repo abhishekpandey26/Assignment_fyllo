@@ -32,4 +32,70 @@
   cursor: pointer;
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 } */
+ .featuredpiechart {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows responsive wrapping */
+}
+
+.chart-container {
+  flex: 1;
+  min-width: 400px; /* Prevents squeezing on small screens */
+}
+
+.compact-table {
+  margin-top: 15px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.compact-table h4 {
+  margin: 5px 0 10px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+.featured-table-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.featured-table-card {
+  flex: 1;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  background-color: white;
+}
+
+.featured-table-title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #555;
+}
+
+.featured-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.featured-table th,
+.featured-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.featured-table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
 
