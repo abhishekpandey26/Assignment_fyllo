@@ -1,59 +1,28 @@
-<div id="top"></div>
+# Fertilizer Analytics Dashboard
 
-<br />
-<div align="center">
-  <h1 style="color: #60AC4A;">
-    Fyllo Interview Task
-  </h1>
+This project is a web application that serves as a dashboard to visualize fertilizer requirement and availability data across various states in India. It is designed to provide meaningful insights through tables and graphs to improve the company's supply chain.
 
-  <p align="center">
-    A Dashboard for chemical fertilizer company
-    <br />
-    <br />
+This project was built as an assignment, and the following tasks were completed based on the requirements.
 
-  </p>
-</div>
+## Key Features & Changes
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-  </ol>
-</details>
+### 1. Dynamic Data in Bigchart.jsx
+- **Removed Hardcoded Data:** The `Bigchart.jsx` component was initially using hardcoded data for states and months. This has been replaced with dynamic data sourced directly from `result.js`.
+- **Dynamic Dropdowns:** The dropdown menus for selecting "State" and "Month" are now dynamically populated based on the unique values present in the dataset. This ensures that the chart always reflects the available data accurately.
 
-<!-- ABOUT THE PROJECT -->
+### 2. Top 5 Products Tables
+- **Top 5 Required Products:** A new table has been added to the dashboard that displays the top 5 fertilizers with the highest requirement. The data is calculated dynamically, and the table shows each product's percentage contribution to the total requirement.
+- **Top 5 Available Products:** Similarly, a table for the top 5 most available fertilizers has been implemented. This table also shows the percentage contribution of each product to the total availability.
+- **Synced with Pie Charts:** Both tables are synchronized with their corresponding pie charts, ensuring data consistency across the dashboard.
 
-## About The Project
+### 3. Fertilizer Availability & Requirements Across the Year
+- **New Chart Implementation:** A new chart has been added to `Featured.jsx` that visualizes the availability and requirements of fertilizers across the year. This provides a clear overview of the demand and supply trends over time.
 
-The project is to create a dashboard for fyllo, displaying the table, which contains the list of fertilizer and their details like availability, requirements etc. And the analytics which is shown in graph so the user can easily know about the insights.Finally this project contains some dummy placeholders to make it look good eg: Navbar.
+### 4. Tabular Representation of Data with AG Grid
+- **AG Grid Integration:** The project now uses AG Grid to display the raw data in a tabular format.
+- **Enhanced Functionality:** The grid includes features like sorting, filtering, and column resizing, allowing for easy data exploration and analysis.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-### Built With
-
-Here is the list of libraries and frameworks used for the project
-
-- [React.js](https://reactjs.org/)
-- [Ag Grid](https://reactjs.org/)
-- [Re Charts](https://reactjs.org/)
-- [Material UI](https://reactjs.org/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
+These changes fulfill all the requirements of the assignment, providing a comprehensive and interactive dashboard for fertilizer data analysis.
 
 ## Getting Started
 
@@ -61,33 +30,24 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-To run this project, You’ll need to have
-
-- npm
-  ```sh
-  Node v14.17.6 or greater
-  npm 6.14.15 or greater
-  ```
+- Node.js (v14.17.6 or greater)
+- npm (v6.14.15 or greater)
 
 ### Installation and Setup
 
 1. Clone the repo
    ```sh
-   git clone https://ankitsingh_16@bitbucket.org/ankitsingh_16/fertilizer.git
+   git clone https://github.com/abhishekpandey26/Assignment_fyllo.git
    ```
 2. Install packages
    ```sh
-   npm install or yarn install
+   npm install
    ```
 3. To start server
    ```sh
-    npm start or yarn start
+    npm start
    ```
 4. To visit App
    ```sh
    localhost:3000
    ```
-   <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
